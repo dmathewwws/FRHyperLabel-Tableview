@@ -37,6 +37,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let text = "Person X has started following you"
         let attributes = [NSForegroundColorAttributeName: UIColor.black]
         
+        cell.label.clearActionDictionary()
+
         cell.label.attributedText = NSAttributedString(string: text, attributes: attributes)
         
         cell.label.setLinkForSubstring("Person X", withLinkHandler: handler)
